@@ -504,3 +504,74 @@ text-decoration:none;
 /* =========================
 SOCIAL
 ========================= */
+
+/* ===========================
+RESPONSIVE NAVBAR V2
+=========================== */
+
+.menu-toggle{
+
+display:none;
+font-size:34px;
+cursor:pointer;
+font-weight:700;
+
+}
+
+@media(max-width:900px){
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 25px;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.navbar ul{
+
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+text-align:center;
+padding:25px 0;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.navbar ul.active{
+
+display:flex;
+
+}
+
+.navbar ul li{
+
+margin:18px 0;
+
+}
+
+.btn-nav{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+}
