@@ -159,3 +159,15 @@ el.style.transition="all .8s ease";
 window.addEventListener("scroll",reveal);
 
 reveal();
+/* ===========================
+MOBILE MENU
+=========================== */
+
+const menuToggle=document.getElementById("menu-toggle");
+const nav=document.getElementById("nav-links");
+
+menuToggle.addEventListener("click",()=>{
+
+nav.classList.toggle("active");
+
+});
