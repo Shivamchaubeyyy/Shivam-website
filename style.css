@@ -59,17 +59,17 @@ color:#111;
 .logo span{
 color:#2563eb;
 }
-
 .navbar ul{
 display:flex;
 list-style:none;
-gap:30px;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .navbar ul li a{
-font-size:16px;
-font-weight:500;
-transition:.3s;
+font-size:14px;
+font-weight:600;
 }
 
 .navbar ul li a:hover{
