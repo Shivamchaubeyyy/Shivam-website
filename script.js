@@ -84,3 +84,78 @@ behavior:"smooth"
 });
 
 });
+/* ===========================
+   SCRIPT.JS PART 2
+=========================== */
+
+// Active Navbar Highlight
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar ul li a");
+
+window.addEventListener("scroll",()=>{
+
+let current = "";
+
+sections.forEach(section=>{
+
+const sectionTop = section.offsetTop-150;
+const sectionHeight = section.clientHeight;
+
+if(pageYOffset>=sectionTop){
+
+current = section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+// Scroll Reveal Animation
+
+const revealElements=document.querySelectorAll(
+".about,.journey,.skills,.achievements,.contact,.social,.timeline-item,.skill-card,.achievement-card,.contact-box"
+);
+
+function reveal(){
+
+revealElements.forEach(el=>{
+
+const top=el.getBoundingClientRect().top;
+const visible=window.innerHeight-120;
+
+if(top<visible){
+
+el.style.opacity="1";
+el.style.transform="translateY(0)";
+
+}
+
+});
+
+}
+
+revealElements.forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(60px)";
+el.style.transition="all .8s ease";
+
+});
+
+window.addEventListener("scroll",reveal);
+
+reveal();
